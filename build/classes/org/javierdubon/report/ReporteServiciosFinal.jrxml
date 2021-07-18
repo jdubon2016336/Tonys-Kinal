@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteServiciosFinal" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b05e3ab8-cc4e-40d6-85b7-b2b2158eb7df">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="variable" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from TipoPlato tp inner join Platos p on tp.codigoTipoPlato = p.codigoTipoPlato inner join Servicios s on p.codigoTipoPlato = s.codigoServicio inner join Productos pr on p.codigoTipoPlato = pr.codigoProducto where s.codigoServicio = $P{variable}]]>
+	</queryString>
+	<field name="codigoTipoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombrePlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionPlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precioPlato" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoProducto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="906b0b3b-da26-4f8b-a0c3-bf1790f3a3d7"/>
+				<text><![CDATA[codigoServicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="2" width="100" height="20" uuid="acd07205-f33c-408b-8733-3fcc68d4fac0"/>
+				<text><![CDATA[tipoServicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="2" width="100" height="20" uuid="caa4edcc-08f1-4fef-9f02-4d0de771b6e6"/>
+				<text><![CDATA[nombrePlato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="2" width="62" height="20" uuid="3efef26b-fea1-4b2e-9b21-ac627a0c2de8"/>
+				<text><![CDATA[cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="2" width="100" height="20" uuid="964aac02-1020-451f-ab81-c1099d814e47"/>
+				<text><![CDATA[codigoProducto]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="56" splitType="Stretch">
+			<textField>
+				<reportElement x="110" y="22" width="100" height="20" uuid="41f3375b-73f7-491c-af96-8058e7edb080"/>
+				<textFieldExpression><![CDATA[$F{tipoServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="22" width="100" height="20" uuid="24f9f7aa-5338-4601-bb22-4d2073896345"/>
+				<textFieldExpression><![CDATA[$F{codigoServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="22" width="100" height="20" uuid="8d4efee8-71fc-4ec1-89a7-73b7e49b3adb"/>
+				<textFieldExpression><![CDATA[$F{nombrePlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="22" width="75" height="20" uuid="38840441-77c7-4d8d-9703-7d07fdce9b82"/>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="22" width="100" height="20" uuid="76bcf170-59ae-44b5-be8f-45b374460b93"/>
+				<textFieldExpression><![CDATA[$F{codigoProducto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="600.0" style="-fx-background-color: ece2c6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javierdubon.controller.Servicio_has_PlatoController">
+   <children>
+      <ImageView fitHeight="50.0" fitWidth="46.0" layoutX="50.0" layoutY="32.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/icono.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="33.0" layoutY="83.0" text="Menú Principal" />
+      <Label layoutX="73.0" layoutY="136.0" text="Código Servicio">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="171.0" layoutY="42.0" text="Servicios_Has_Platos">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblServicio_has_Plato" layoutX="48.0" layoutY="224.0" onKeyReleased="#seleccionar" onMouseClicked="#seleccionar" prefHeight="152.0" prefWidth="505.0">
+         <columns>
+            <TableColumn fx:id="colCodigoServicio" prefWidth="252.0" text="Código Servicio" />
+            <TableColumn fx:id="colCodigoPlato" prefWidth="252.0" text="Codigo Plato" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnEliminar" layoutX="252.0" layoutY="394.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="44.0" prefWidth="97.0" text="Eliminar">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="73.0" layoutY="174.0" text="Código Plato">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoServicio" layoutX="199.0" layoutY="131.0" prefHeight="25.0" prefWidth="258.0" />
+      <ComboBox fx:id="cmbCodigoPlato" layoutX="199.0" layoutY="169.0" prefHeight="25.0" prefWidth="258.0" />
+   </children>
+</AnchorPane>

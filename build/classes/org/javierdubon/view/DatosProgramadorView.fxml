@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="383.0" prefWidth="492.0" style="-fx-background-color: #ece2c6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javierdubon.controller.DatosProgramadorController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="383.0" stroke="TRANSPARENT" strokeType="INSIDE" width="182.0">
+         <fill>
+            <LinearGradient endX="0.5666666666666667" endY="1.0" startX="0.5714285714285714" startY="0.43809523809523815">
+               <stops>
+                  <Stop color="#7c4f00" />
+                  <Stop color="#a19176" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="189.0" fitWidth="136.0" layoutX="24.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Perfil%20(1).jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="16.0" layoutY="252.0" text="Programador" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="203.0" layoutY="52.0" text="Javier Alejandro Dubón Ubedo">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="200.0" layoutY="107.0" text="Estudiante">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="200.0" layoutY="161.0" text="2016336">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="200.0" layoutY="209.0" text="IN5AV">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="329.0" text="Información:   jdubon-2016336@kinal.edu.gt">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="50.0" fitWidth="46.0" layoutX="3.0" layoutY="11.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/icono.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

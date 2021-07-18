@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubReportePresupuestos" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e98d539f-b855-40c2-a438-51631b5e3d8b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="variable" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_SubReportePresupuesto($P{variable});]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPresupuesto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaSolicitud" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidadPresupuesto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="54fb90aa-0c99-4380-9e9c-f1101dd18554"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Fecha Solicitud]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="0" width="100" height="20" uuid="802a41a2-118b-4f1e-9257-fa16bd4f8e19"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad Presupuesto]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="0" y="5" width="100" height="20" uuid="5d1838a6-11ee-44f1-8994-0683422c039a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{fechaSolicitud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="Q #,##0.00">
+				<reportElement x="116" y="5" width="100" height="20" uuid="dbdabd1b-25ad-4ade-bd73-3d27470696e5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cantidadPresupuesto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

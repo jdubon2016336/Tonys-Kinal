@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="600.0" style="-fx-background-color: ece2c6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javierdubon.controller.TipoEmpleadoController">
+   <children>
+      <Label layoutX="190.0" layoutY="48.0" text="Tipos de Empleado">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="128.0" text="Código Tipo Empleado">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblTipoEmpleado" layoutX="30.0" layoutY="227.0" onKeyReleased="#seleccionar" onMouseClicked="#seleccionar" prefHeight="139.0" prefWidth="540.0">
+        <columns>
+          <TableColumn fx:id="colCodigoTipoEmpleado" prefWidth="171.0" text="CodigoTipoEmpleado" />
+          <TableColumn fx:id="colDescripcion" prefWidth="368.0" text="Descripcion" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnReporte" layoutX="451.0" layoutY="391.0" mnemonicParsing="false" onAction="#reporte" prefHeight="44.0" prefWidth="97.0" text="Reporte">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="319.0" layoutY="391.0" mnemonicParsing="false" onAction="#editar" prefHeight="44.0" prefWidth="97.0" text="Editar">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="192.0" layoutY="391.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="44.0" prefWidth="97.0" text="Eliminar">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNuevo" layoutX="52.0" layoutY="391.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="44.0" prefWidth="97.0" text="Nuevo">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtCodigoTipoEmpleado" editable="false" layoutX="203.0" layoutY="123.0" prefHeight="25.0" prefWidth="150.0" />
+      <TextField fx:id="txtDescripcion" editable="false" layoutX="203.0" layoutY="161.0" prefHeight="25.0" prefWidth="351.0" />
+      <Label layoutX="54.0" layoutY="166.0" text="Descripción">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="76.0" text="Menú Principal" />
+      <ImageView fitHeight="50.0" fitWidth="46.0" layoutX="38.0" layoutY="25.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/icono.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="46.0" layoutX="508.0" layoutY="25.0" onMouseClicked="#empleado" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Empleado.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="502.0" layoutY="76.0" text="Empleados" />
+   </children>
+</AnchorPane>

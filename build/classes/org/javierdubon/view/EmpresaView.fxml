@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="600.0" style="-fx-background-color: ece2c6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javierdubon.controller.EmpresaController">
+   <children>
+      <Label layoutX="238.0" layoutY="36.0" text="Empresas">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="111.0" text="Codigo Empresa">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="48.0" layoutY="145.0" text="Nombre Empresa">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="47.0" layoutY="180.0" text="Direccion Empresa" />
+      <Label layoutX="48.0" layoutY="211.0" text="Teléfono">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtCodigoEmpresa" editable="false" layoutX="167.0" layoutY="106.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="txtNombreEmpresa" layoutX="167.0" layoutY="140.0" prefHeight="25.0" prefWidth="387.0" />
+      <TextField fx:id="txtDireccionEmpresa" layoutX="167.0" layoutY="176.0" prefHeight="25.0" prefWidth="387.0" />
+      <TextField fx:id="txtTelefonoEmpresa" editable="false" layoutX="167.0" layoutY="206.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: 7c4f00;" />
+      <TableView fx:id="tblEmpresas" layoutX="31.0" layoutY="246.0" onKeyReleased="#seleccionar" onMouseClicked="#seleccionar" prefHeight="139.0" prefWidth="541.0">
+        <columns>
+          <TableColumn fx:id="colCodigoEmpresa" prefWidth="96.0" text="Codigo Empresa" />
+          <TableColumn fx:id="colNombreEmpresa" prefWidth="213.0" text="Nombre Empresa" />
+            <TableColumn fx:id="colDireccionEmpresa" prefWidth="135.0" text="Dirección" />
+            <TableColumn fx:id="colTelefonoEmpresa" minWidth="0.0" prefWidth="96.0" text="Teléfono" />
+        </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="45.0" layoutY="406.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="44.0" prefWidth="97.0" text="Nuevo">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnEliminar" layoutX="185.0" layoutY="406.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="44.0" prefWidth="97.0" text="Eliminar">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnEditar" layoutX="312.0" layoutY="406.0" mnemonicParsing="false" onAction="#editar" prefHeight="44.0" prefWidth="97.0" text="Editar">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnReporte" layoutX="444.0" layoutY="406.0" mnemonicParsing="false" onAction="#reporte" prefHeight="44.0" prefWidth="97.0" text="Reporte">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font></Button>
+      <ImageView fitHeight="50.0" fitWidth="46.0" layoutX="40.0" layoutY="14.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/icono.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="117.0" fitWidth="46.0" layoutX="518.0" layoutY="27.0" onMouseClicked="#presupuesto" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Presupuesto.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="23.0" layoutY="65.0" text="Menú Principal" />
+      <Label layoutX="506.0" layoutY="74.0" text="Presupuestos" />
+      <ImageView fitHeight="50.0" fitWidth="46.0" layoutX="435.0" layoutY="27.0" onMouseClicked="#servicio" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Servicio.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="435.0" layoutY="74.0" text="Servicios" />
+   </children>
+</AnchorPane>
