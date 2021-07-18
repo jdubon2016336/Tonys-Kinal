@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteServicios" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b39612e0-2e0f-41a0-b714-a000ea4a540f">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarServicios]]>
+	</queryString>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="752" height="38" uuid="5e2943ac-d9fe-449a-9b13-e296f98f1d17"/>
+				<imageExpression><![CDATA["C:\\Users\\xavie\\Documents\\MarcoReporte.png"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="38" width="752" height="41" uuid="7199209d-129a-4530-954a-a8989ee5b899"/>
+				<imageExpression><![CDATA["C:\\Users\\xavie\\Documents\\FondoReporte.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="34" y="38" width="42" height="41" uuid="1f51b98e-a325-4bb9-a5b4-188a3490d2a0"/>
+				<imageExpression><![CDATA["C:\\Users\\xavie\\Documents\\NetBeansProjects\\TonysKinal2016336\\src\\org\\javierdubon\\image\\icono.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="76" y="59" width="100" height="20" uuid="0f5bff62-ecee-4ef1-9f87-26c0126b1d7d"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tony´s Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="752" height="35" uuid="c1a8fad5-1651-479b-930e-17427f697f23"/>
+				<imageExpression><![CDATA["C:\\Users\\xavie\\Documents\\FondoReporte.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="24" y="0" width="710" height="35" uuid="a3a4a3ec-726e-4d5f-a168-747f615c7de8"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Servicios]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="752" height="61" uuid="4f27abdc-7fd5-4303-b9b7-8223e12ae83c"/>
+				<imageExpression><![CDATA["C:\\Users\\xavie\\Documents\\FondoReporte.png"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="24" y="35" width="693" height="26" forecolor="#663300" backcolor="#663300" uuid="c5b5d909-8918-4652-bc80-bedfa450f0ed"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="144" y="35" width="111" height="26" forecolor="#FFFFFF" uuid="0534ba69-8c7b-4224-93e0-d7e1af180e20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="35" width="106" height="26" forecolor="#FFFFFF" uuid="bef6d7da-37ff-4c3d-ae83-5e5f961d1e19"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono Contacto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="35" width="115" height="26" forecolor="#FFFFFF" uuid="1b3ba564-690e-4678-ae7c-be530aeaf529"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Servicio]]></text>
+			</staticText>
+			<line>
+				<reportElement x="487" y="35" width="1" height="26" uuid="1e2d0ffd-c6d1-4ba7-aa4d-52f1ca30858e"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="380" y="35" width="1" height="26" uuid="4a321fb9-55cc-43f8-b2fb-04dcca53b58c"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="139" y="35" width="1" height="26" uuid="e8fe7f38-61fe-4d2b-a46a-e9bffceea3b6"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="255" y="35" width="1" height="26" uuid="6afe9185-373c-4e91-a25c-bd7e31890c6e"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="381" y="35" width="106" height="26" forecolor="#FFFFFF" uuid="ac5faf21-a250-4b78-afc1-b78c70b90371"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora]]></text>
+			</staticText>
+			<line>
+				<reportElement x="594" y="35" width="1" height="26" uuid="3bf3ff49-6cc8-4bba-a3f2-c7db2f0c106d"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="595" y="35" width="106" height="26" forecolor="#FFFFFF" uuid="62f96b38-0f97-449d-b890-e1e1c09126fa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="258" y="35" width="111" height="26" forecolor="#FFFFFF" uuid="118a4402-db84-4550-8bed-a51df8312dd5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo Servicio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="64" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="752" height="64" uuid="f1187d20-c93b-4855-b5fb-aa5797cd8089"/>
+				<imageExpression><![CDATA["C:\\Users\\xavie\\Documents\\FondoReporte.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="34" y="15" width="100" height="20" uuid="65aca3d2-4cc9-40df-af7f-c265ccd575d5"/>
+				<textFieldExpression><![CDATA[$F{codigoServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="15" width="100" height="20" uuid="7a26b20f-d6aa-4c08-bd5a-dc569866d913"/>
+				<textFieldExpression><![CDATA[$F{fechaServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="15" width="100" height="20" uuid="08e5a7e5-fe66-48cf-8ed5-859a251edf6c"/>
+				<textFieldExpression><![CDATA[$F{tipoServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="388" y="15" width="100" height="20" uuid="70fe9899-5491-4150-b062-fb9d7dc7eaec"/>
+				<textFieldExpression><![CDATA[$F{horaServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="15" width="100" height="20" uuid="b89ac544-1f79-4d7c-b806-f4a35b2a0f17"/>
+				<textFieldExpression><![CDATA[$F{telefonoContacto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="601" y="15" width="100" height="20" uuid="0b5037fc-2dac-471a-8d15-f557663dc3cd"/>
+				<textFieldExpression><![CDATA[$F{codigoEmpresa}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="25" y="39" width="691" height="1" uuid="00c1a2bb-2642-46e2-957e-e78af32cf0bf"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dashed" lineColor="#996600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="140" y="0" width="1" height="39" uuid="ed95a552-cb74-4151-99c6-7aaba8abed2b"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dashed" lineColor="#996600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="256" y="0" width="1" height="39" uuid="9b3303d1-f6bc-4571-974a-03f071b6336c"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dashed" lineColor="#996600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="382" y="0" width="1" height="39" uuid="0c3b2cc8-d821-4048-aec5-5b509f62c46b"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dashed" lineColor="#996600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="486" y="0" width="1" height="39" uuid="edb1cbbe-317b-4af2-940a-e60e115f68c5"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dashed" lineColor="#996600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="595" y="1" width="1" height="39" uuid="64afbc4c-0029-4d0b-9b34-18c28a02a408"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dashed" lineColor="#996600"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="752" height="45" uuid="7455b943-c9b6-4e86-a904-e866d930d0ee"/>
+				<imageExpression><![CDATA["C:\\Users\\xavie\\Documents\\FondoReporte.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="0" width="752" height="3" forecolor="#663300" uuid="33c98869-dd61-4534-8435-70244b0af444"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineColor="#663300"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="16" width="752" height="29" uuid="d7da3e1c-4031-4dcf-ad13-a062c2de7a10"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA["Hablamos el lenguaje de la buena comida"]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="752" height="16" uuid="81d21045-1d62-404b-af17-6ab980cb671b"/>
+				<imageExpression><![CDATA["C:\\Users\\xavie\\Documents\\FondoReporte.png"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="16" width="752" height="38" uuid="90c8e95f-b7fc-4f8b-bae9-56bf391e7db1"/>
+				<imageExpression><![CDATA["C:\\Users\\xavie\\Documents\\MarcoReporte.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

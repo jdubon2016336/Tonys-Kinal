@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteServicioFinal" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6a413448-b546-4f0d-ab84-d58f2fa34c9e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="59"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="variable" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\xavie\\Documents\\NetBeansProjects\\TonysKinal2016336\\src\\org\\javierdubon\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ReporteServicio($P{variable})]]>
+	</queryString>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombrePlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionPlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precioPlato" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoTipoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoProducto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="572" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="752" height="572" uuid="9e0d9ba3-a22f-40ec-b30f-215a07426d9e"/>
+				<imageExpression><![CDATA["C:\\Users\\xavie\\Documents\\NetBeansProjects\\TonysKinal2016336\\src\\org\\javierdubon\\image\\FondoReporte.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="30" y="38" width="42" height="41" uuid="6ba8099f-e343-418f-8acb-ec0b231b5db3"/>
+				<imageExpression><![CDATA["C:\\Users\\xavie\\Documents\\NetBeansProjects\\TonysKinal2016336\\src\\org\\javierdubon\\image\\icono.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="72" y="59" width="100" height="20" uuid="01436dca-8070-4cc0-99c1-ff023387b7cc"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tony´s Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="752" height="34" uuid="447839e3-e866-4ff2-b158-4e613f691c00"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Servicio]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="71" splitType="Stretch">
+			<rectangle>
+				<reportElement x="260" y="45" width="472" height="26" forecolor="#663300" backcolor="#663300" uuid="f5d826bd-b82d-4375-bf38-9a54e30790f8"/>
+			</rectangle>
+			<line>
+				<reportElement x="608" y="45" width="1" height="26" uuid="3bc4e1f1-4ec3-4a73-9839-ff37992a77d3"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="502" y="45" width="106" height="26" forecolor="#FFFFFF" uuid="8ee3e9a6-cfe6-47de-9959-fcd05b9227ae"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Plato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="609" y="45" width="106" height="26" forecolor="#FFFFFF" uuid="a1e50f3b-d9d9-40be-9ef8-2583038d4ba9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad Platos]]></text>
+			</staticText>
+			<line>
+				<reportElement x="501" y="45" width="1" height="26" uuid="6221c6b2-d124-4519-897b-924c2a3cc244"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="377" y="45" width="124" height="26" forecolor="#FFFFFF" uuid="7290d9b4-e41b-4936-b776-c71ab81c697b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lugar Servicio]]></text>
+			</staticText>
+			<line>
+				<reportElement x="376" y="45" width="1" height="26" uuid="a06188a6-6dfd-4419-b55b-376e6457f45d"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="261" y="45" width="115" height="26" forecolor="#FFFFFF" uuid="aa18de62-7a65-4259-a386-3b9115e36a42"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="14" width="100" height="20" uuid="c62e530a-a065-4875-b056-87741ff91a2e"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo Servicio]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="401" y="14" width="100" height="20" uuid="2da25713-068d-461f-8361-3096950f1e54"/>
+				<textFieldExpression><![CDATA[$F{tipoServicio}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="30" y="14" width="219" height="57" uuid="33333047-fba9-459b-a582-7b4a5ae4e5b5"/>
+				<subreportParameter name="variable">
+					<subreportParameterExpression><![CDATA[$P{variable}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubReporteServicioFinal.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="52" splitType="Stretch">
+			<line>
+				<reportElement x="260" y="39" width="469" height="1" uuid="35b07074-a909-4643-91d5-44bdb09e1118"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dashed" lineColor="#996600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="376" y="0" width="1" height="39" uuid="beb87e4c-f575-4ccd-806e-7f60f85183ac"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dashed" lineColor="#996600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="502" y="0" width="1" height="39" uuid="22a634ad-4879-46e2-be66-22aa6b3daef2"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dashed" lineColor="#996600"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="609" y="0" width="1" height="39" uuid="3fd7534a-1fbc-40d2-9e56-ac89a09930b0"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dashed" lineColor="#996600"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="261" y="0" width="115" height="20" uuid="5df2be7e-a38e-4651-a130-bfb75216cca3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{fechaServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="388" y="0" width="100" height="20" uuid="15a13fa9-6ec6-4369-9b85-27c9e76e80b4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{lugarServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="503" y="0" width="107" height="20" uuid="2306bf0a-6ef9-4f6b-a94f-03f8702b82f1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombrePlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="615" y="0" width="100" height="20" uuid="d50a767a-ba38-4a14-a951-61eb50a1a37d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="16" width="752" height="29" uuid="94a3eded-7ecd-45ba-a6b8-365f82926613"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA["Hablamos el lenguaje de la buena comida"]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="752" height="1" forecolor="#663300" uuid="118e118e-5e35-4b17-af18-0cad804ee091"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineColor="#663300"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
